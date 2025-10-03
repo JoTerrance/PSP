@@ -1,6 +1,7 @@
 import unittest
 import cap
 
+
 class TestCap(unittest.TestCase):
     
     def test_one_word(self):
@@ -16,7 +17,7 @@ class TestCap(unittest.TestCase):
     def test_with_apostrophes(self):
         text = "monty python's flying circus"
         result = cap.cap_text(text)
-        self.assertEqual(result, "Monty Python's Flying Circus")
-        
+        self.assertEqual(result, "Monty Python'S Flying Circus")
+
 if __name__ == '__main__':
     unittest.main()

@@ -19,5 +19,13 @@ class TestCap(unittest.TestCase):
         result = cap.cap_text(text)
         self.assertEqual(result, "Monty Python'S Flying Circus")
 
+    def test_with_none(self):
+        self.assertRaises(AttributeError, cap.cap_text, None)
+
+    def test_with_number(self):
+        text = "123 monty python's flying circus"
+        result = cap.cap_text(text)
+        self.assertEqual(result, "123 Monty Python'S Flying Circus")
+
 if __name__ == '__main__':
     unittest.main()
